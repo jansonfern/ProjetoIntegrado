@@ -1,0 +1,72 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class Menu extends JFrame {
+
+    public Menu() {
+        setTitle("Menu");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new FlowLayout());
+        getContentPane().setBackground(Color.BLUE);
+
+        // Componentes
+        JButton menuButton = createMenuButton("./img/botao-de-menu.png", "Toggle Menu");
+        JButton notificacaoButton = createMenuButton("./img/notificacao.png", "Toggle Notificações");
+        JButton voltarButton = createMenuButton("./img/volte.png", "Voltar");
+        JButton meuPerfilButton = createMenuButton("Meu Perfil");
+        JButton notificacoesButton = createMenuButton("Notificações");
+        JButton registroVacinaButton = createMenuButton("Registro de Vacina");
+        JButton historicoButton = createMenuButton("Histórico");
+        JButton sairButton = createMenuButton("Sair");
+
+        // Adicionando componentes ao contêiner
+        add(menuButton);
+        add(notificacaoButton);
+        add(voltarButton);
+        add(meuPerfilButton);
+        add(notificacoesButton);
+        add(registroVacinaButton);
+        add(historicoButton);
+        add(sairButton);
+
+        pack();
+        setLocationRelativeTo(null); // Centralizar a janela na tela
+        setVisible(true);
+    }
+
+    private JButton createMenuButton(String imagePath, String tooltip) {
+        ImageIcon icon = new ImageIcon(imagePath);
+        JButton button = new JButton(icon);
+        button.setPreferredSize(new Dimension(50, 50));
+        button.setToolTipText(tooltip);
+        button.setBackground(new Color(255, 255, 255)); // Cor branca
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Adicione a lógica para lidar com o clique no botão aqui
+                JOptionPane.showMessageDialog(null, "Implemente a lógica para o botão: " + tooltip);
+            }
+        });
+        return button;
+    }
+
+    private JButton createMenuButton(String text) {
+        JButton button = new JButton(text);
+        button.setPreferredSize(new Dimension(200, 30));
+        button.setBackground(new Color(255, 255, 255)); // Cor branca
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Adicione a lógica para lidar com o clique no botão aqui
+                JOptionPane.showMessageDialog(null, "Implemente a lógica para o botão: " + text);
+            }
+        });
+        return button;
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> new Menu());
+    }
+}
