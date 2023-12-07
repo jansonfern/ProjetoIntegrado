@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+</head>
+<body>
+    <img class="menu" src="./img/botao-de-menu.png" alt="" onclick="toggleMenu()">
+    <img class="menu" src="./img/notificacao.png" alt="" onclick="toggleMenu()">
+
+    <a href="./TelaInicial.html"><img class="menu" src="./img/volte.png" alt="" onclick="toggleMenu()"></a>
+    
+
+
+<style>
+    body {
+            font-family: Arial, sans-serif;
+            background-color: slateblue;
+            margin: 0;
+            padding: 20px;
+        }
+        .menu {
+            height: auto;
+            width: 30px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .menu-box {
+        background-color: #fff;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        max-width: 300px;
+    }
+</style>
+
+<div class="menu-box">
+    <a href="./MeuPerfil.html">
+        <p>Meu perfil</p>
+    </a>
+    
+</div>
+<div class="menu-box">
+    <a href="./Notificacao.html">
+        <p>Notificações</p>
+    </a>
+    
+</div>
+<div class="menu-box">
+    <a href="./RegistroVacina.html">
+        <p>Registro de Vacina</p>
+    </a>
+    
+</div>
+<div class="menu-box">
+    <a href="./Historico.html"><p>Histórico</p></a>
+    
+</div>
+<div class="menu-box">
+    <a href="./index.html" onclick="logout()">Sair</a>
+</div>
+<script src="./js/Menu.js"></script>
+</body>
+
+</html>

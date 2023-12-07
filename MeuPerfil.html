@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: slateblue;
+            margin: 0;
+            padding: 20px;
+        }
+        .botoes {
+            height: auto;
+            width: 30px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        h1 {
+            font-size: 30px;
+            color: white;
+        }
+        h2 {
+            font-size: 20px;
+            color: white;
+        }
+        input {
+            padding: 5px;
+            margin: 5px;
+        }
+        button {
+            padding: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        h3{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+        <img class="botoes" src="./img/botao-de-menu.png" alt="" onclick="toggleMenu()">
+
+    <a href="./TelaInicial.html">
+        <img class="botoes" src="./img/volte.png" alt="" onclick="toggleMenu()">
+    </a>
+
+    <h1>Perfil</h1>
+
+    <h2>Informações Pessoais</h2>
+
+    <h3>Nome</h3>
+    <input type="text" id="nome" placeholder="Seu Nome">
+    <button onclick="atualizarNome()">Atualizar Nome</button>
+
+    <h3>Email</h3>
+    <input type="text" id="email" placeholder="Seu Email">
+    <button onclick="atualizarEmail()">Atualizar Email</button>
+
+    <h3>Data de Nascimento</h3>
+    <input type="date" id="dataNascimento">
+    <button onclick="atualizarDataNascimento()">Atualizar Data de Nascimento</button>
+
+    <h3>Senha</h3>
+    <input type="text" id="Senha">
+    <button onclick="atualizarSenha()">Atualizar Senha</button>
+
+    <script src="./js/MeuPerfil.js"></script>
+</body>
+</html>

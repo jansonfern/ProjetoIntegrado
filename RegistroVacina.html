@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Vacinação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color:slateblue ;
+            color: white;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            text-align: left;
+            
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #mensagem {
+            margin-top: 10px;
+            color: white;
+
+        }
+        .botao-menu {
+            height: auto;
+            width: 30px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+        <img class="botao-menu" src="./img/botao-de-menu.png" alt="" onclick="toggleMenu()">
+    
+
+    <a href="./TelaInicial.html">
+        <img class="botao-menu" src="./img/volte.png" alt="" onclick="toggleMenu()">
+    </a>
+    
+    <h1>Registro de Vacinação</h1>
+
+    <form id="registroVacinaForm">
+        <label for="nomeVacina">Nome da Vacina:</label>
+        <input type="text" id="nomeVacina" name="nomeVacina" required>
+
+        <label for="dataAplicacao">Data de Aplicação:</label>
+        <input type="date" id="dataAplicacao" name="dataAplicacao" required>
+
+        <label for="proximaAplicacao">Próxima Aplicação:</label>
+        <input type="date" id="proximaAplicacao" name="proximaAplicacao" required>
+
+        <button type="submit">Registrar Vacina</button>
+    </form>
+</div>
+
+    <div id="mensagem"></div>
+
+<script src="./js/RegistroVacina.js"></script>
+</body>
+</html>

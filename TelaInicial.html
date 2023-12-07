@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Inicial</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: slateblue;
+            margin: 0;
+            /* padding: 20px;  */
+        }
+        .botoes {
+            height: auto;
+            width: 30px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        h1 {
+            text-align: center;   
+        }
+        .title {
+            color: black;
+            text-align: center;
+        }
+        div {
+            color: white;
+            display: inline-block;
+            padding: 10px;
+            text-align: center; /* Adicionado para centralizar o conteúdo */
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            max-height: 250px;  
+        }
+        nav{
+            background-color: aliceblue;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+    <a href="Menu.html">
+        <img class="botoes" src="./img/botao-de-menu.png" alt="botao-menu" onclick="toggleMenu()">
+    </a>
+    
+    <img class="botoes" src="./img/notificacao.png" alt="botao-notificacao" onclick="toggleMenu()">
+
+    <h1 class="title">
+        Seja Bem Vindo!
+    </h1>
+</nav>
+
+    <div>
+        <h1>
+            A Importancia da Vacinação
+        </h1>
+
+        <p>
+            A vacinação é essencial para prevenir doenças e proteger a saúde individual e coletiva. <br> Ao receber vacinas, fortalecemos nosso sistema imunológico, tornando-nos mais <br> resistentes a infecções. Além disso, a vacinação desempenha um papel crucial na <br> criação da imunidade de rebanho, protegendo aqueles que não podem ser vacinados, <br> como bebês e pessoas com certas condições médicas. Contribuir para programas de <br> imunização não é apenas um ato de autocuidado, mas também um gesto solidário para <br> construir comunidades mais saudáveis.
+        </p>
+    
+        <img src="./img/vac.png" alt="">
+    </div>
+
+    <div>
+        <h1>
+            A Transformação pela Vacinação
+        </h1>
+
+        <p>
+            A vacinação é uma ferramenta transformadora na promoção da saúde global. Ao longo <br> dos anos, as vacinas têm sido responsáveis por controlar epidemias, reduzir a <br> incidência de doenças graves e melhorar a qualidade de vida. Além de proteger <br> indivíduos, a vacinação é um instrumento poderoso para fortalecer a resiliência das <br> comunidades. A rápida implementação de programas de imunização também se revela <br> crucial em cenários de pandemia, destacando o papel fundamental das vacinas na <br> segurança e no progresso socioeconômico.
+        </p>
+        <img src="./img/vac2.png" alt="">
+    </div>
+    <script src="./js/TelaInicial.js/"></script>
+</body>
+</html>

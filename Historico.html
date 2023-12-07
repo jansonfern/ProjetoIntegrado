@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico</title>
+</head>
+<body>
+    <h1>Histórico de Vacina</h1>
+    <img class="botao-menu" src="./img/botao-de-menu.png" alt="">
+
+    <a href="./TelaInicial.html">
+        <img class="botao-menu" src="./img/volte.png" alt="" onclick="toggleMenu()">
+    </a>
+
+    <h2>Vacinações recentes</h2>
+    <p id="data-vacinacao-recente" style="display: none;"></p>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: slateblue;
+            margin: 0;
+            padding: 30px;
+        }
+        .botao-menu {
+            height: auto;
+            width: 30px;
+            margin: 10px;
+        }
+        h1 {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+            font-size: 30px;
+        }
+        h2 {
+            font-family: Arial, sans-serif;
+            text-align: left;
+            color: white;
+            font-size: 20px;
+        }
+        p {
+            font-family: Arial, sans-serif;
+            text-align: left;
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+
+<script>
+    // Verifica se há dados de vacinação armazenados no localStorage
+    var vacinacoes = localStorage.getItem('vacinacoes');
+
+    // Adiciona a lógica para exibir os dados ou a mensagem correspondente
+    var dataVacinacaoRecente = document.getElementById("data-vacinacao-recente");
+    if (vacinacoes) {
+        // Se houver vacinações, exibe a última data registrada
+        var ultimaVacinacao = JSON.parse(vacinacoes)[0]; // Supondo que a lista esteja ordenada pela data
+        dataVacinacaoRecente.innerText = 'Data da última vacinação registrada: ' + ultimaVacinacao.dataAplicacao;
+    } else {
+        // Se não houver vacinações, exibe a mensagem
+        dataVacinacaoRecente.innerText = 'Sem vacinações recentes';
+    }
+</script>
+
+<script src="./js/Historico.js"></script>
+</body>
+</html>
